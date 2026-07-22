@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Кейс Анны Соколовой — рекламные AI-визуалы, предметная AI-съёмка и креативные концепции для брендов.">
+
+    <title>AI-визуалы — Анна Соколова</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --background: #f5f2ed;
+            --surface: #ffffff;
+            --surface-soft: #ece8e1;
+
+            --text: #24211f;
+            --text-light: #716c66;
+            --line: rgba(36, 33, 31, 0.12);
+
+            --accent: #6c5ce7;
+            --accent-soft: #ece8ff;
+
+            --green: #284f3a;
+            --green-soft: #dfe9e2;
+
+            --rose: #c87988;
+            --rose-soft: #f4e4e8;
+
+            --dark: #111111;
+            --dark-soft: #1d1d1d;
+
+            --radius-large: 38px;
+            --radius-medium: 24px;
+
+            --shadow:
+                0 28px 80px rgba(44, 38, 33, 0.11);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(200, 121, 136, 0.10),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(108, 92, 231, 0.10),
+                    transparent 28%
+                ),
+                var(--background);
+
+            color: var(--text);
+
+            font-family:
+                "Inter",
+                Arial,
+                sans-serif;
+
+            line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* Header */
+
+        .header {
+            position: relative;
+            z-index: 20;
+
+            padding: 22px 0;
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo__mark {
+            display: grid;
+            place-items: center;
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 14px;
+
+            background: var(--dark);
+            color: #ffffff;
+
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .logo__text {
+            font-family: "Manrope", sans-serif;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 12px 18px;
+
+            border: 1px solid var(--line);
+            border-radius: 999px;
+
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+
+            color: var(--text);
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            background: #ffffff;
+            border-color: rgba(36, 33, 31, 0.23);
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 48px 0 92px;
+        }
+
+        .hero__card {
+            position: relative;
+            overflow: hidden;
+
+            padding: 76px 70px;
+
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 44px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.95),
+                    rgba(246, 239, 241, 0.88)
+                );
+
+            box-shadow: var(--shadow);
+        }
+
+        .hero__card::before {
+            content: "";
+
+            position: absolute;
+            right: -100px;
+            top: -130px;
+
+            width: 390px;
+            height: 390px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(108, 92, 231, 0.18),
+                    rgba(108, 92, 231, 0)
+                );
+        }
+
+        .hero__card::after {
+            content: "";
+
+            position: absolute;
+            left: -120px;
+            bottom: -170px;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(200, 121, 136, 0.18),
+                    rgba(200, 121, 136, 0)
+                );
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 24px;
+
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 32px;
+            height: 2px;
+
+            background: currentColor;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(50px, 7vw, 92px);
+            line-height: 0.96;
+            letter-spacing: -0.065em;
+        }
+
+        .hero__description {
+            max-width: 760px;
+
+            margin-top: 30px;
+
+            color: var(--text-light);
+
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .hero__chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-top: 35px;
+        }
+
+        .hero-chip {
+            padding: 10px 15px;
+
+            border: 1px solid var(--line);
+            border-radius: 999px;
+
+            background: rgba(255, 255, 255, 0.65);
+
+            color: #514c48;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* General section */
+
+        .section {
+            padding: 20px 0 110px;
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 0.82fr 1.18fr;
+            gap: 70px;
+            align-items: start;
+
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            color: var(--text-light);
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin-top: 12px;
+
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(38px, 5vw, 60px);
+            line-height: 1.03;
+            letter-spacing: -0.055em;
+        }
+
+        .section-description {
+            color: var(--text-light);
+
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        /* Advertising */
+
+        .advertising-card {
+            overflow: hidden;
+
+            border-radius: var(--radius-large);
+
+            background: #ffffff;
+
+            box-shadow: var(--shadow);
+        }
+
+        .advertising-card__image {
+            overflow: hidden;
+        }
+
+        .advertising-card__image img {
+            transition: transform 0.7s ease;
+        }
+
+        .advertising-card:hover .advertising-card__image img {
+            transform: scale(1.025);
+        }
+
+        .advertising-card__content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 32px;
+            align-items: center;
+
+            padding: 36px 40px 40px;
+        }
+
+        .advertising-card__title {
+            font-family: "Manrope", sans-serif;
+            font-size: 32px;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .advertising-card__subtitle {
+            margin-top: 8px;
+
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .advertising-card__text {
+            max-width: 760px;
+
+            margin-top: 15px;
+
+            color: var(--text-light);
+
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 9px 13px;
+
+            border-radius: 999px;
+
+            background: var(--green-soft);
+            color: var(--green);
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* Product photography */
+
+        .product-section {
+            padding: 110px 0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #ece8e1 0%,
+                    #f5f2ed 100%
+                );
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .product-card {
+            position: relative;
+            overflow: hidden;
+
+            min-height: 340px;
+
+            border-radius: 26px;
+
+            background: #ddd5ca;
+
+            box-shadow:
+                0 20px 50px rgba(38, 32, 27, 0.10);
+        }
+
+        .product-card:nth-child(1) {
+            grid-column: span 7;
+            grid-row: span 2;
+        }
+
+        .product-card:nth-child(2) {
+            grid-column: span 5;
+        }
+
+        .product-card:nth-child(3) {
+            grid-column: span 5;
+        }
+
+        .product-card:nth-child(4) {
+            grid-column: span 4;
+        }
+
+        .product-card:nth-child(5) {
+            grid-column: span 4;
+        }
+
+        .product-card:nth-child(6) {
+            grid-column: span 4;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.7s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.045);
+        }
+
+        .product-card__caption {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            padding: 13px 15px;
+
+            border: 1px solid rgba(255, 255, 255, 0.48);
+            border-radius: 16px;
+
+            background: rgba(255, 255, 255, 0.76);
+            backdrop-filter: blur(13px);
+
+            color: #302c29;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .product-card__number {
+            color: #8e8379;
+
+            font-size: 11px;
+            letter-spacing: 0.08em;
+        }
+
+        /* Creative concepts */
+
+        .creative-section {
+            padding: 120px 0;
+
+            background: var(--dark);
+            color: #ffffff;
+        }
+
+        .creative-section .section-label {
+            color: #a09a93;
+        }
+
+        .creative-section .section-description {
+            color: #a9a39d;
+        }
+
+        .creative-intro {
+            margin-bottom: 80px;
+        }
+
+        .creative-item {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(310px, 0.75fr);
+            gap: 58px;
+            align-items: center;
+
+            margin-bottom: 110px;
+        }
+
+        .creative-item:nth-child(even) {
+            grid-template-columns: minmax(310px, 0.75fr) minmax(0, 1.25fr);
+        }
+
+        .creative-item:nth-child(even) .creative-item__image {
+            order: 2;
+        }
+
+        .creative-item:nth-child(even) .creative-item__content {
+            order: 1;
+        }
+
+        .creative-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .creative-item__image {
+            overflow: hidden;
+
+            border-radius: 32px;
+
+            background: #242424;
+
+            box-shadow:
+                0 35px 90px rgba(0, 0, 0, 0.35);
+        }
+
+        .creative-item__image img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.8s ease,
+                filter 0.8s ease;
+        }
+
+        .creative-item:hover .creative-item__image img {
+            transform: scale(1.03);
+        }
+
+        .creative-item__number {
+            color: #918a83;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .creative-item__title {
+            margin-top: 16px;
+
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(34px, 4vw, 56px);
+            line-height: 1.04;
+            letter-spacing: -0.05em;
+        }
+
+        .creative-item__subtitle {
+            margin-top: 18px;
+
+            color: #d3cec8;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .creative-item__text {
+            margin-top: 18px;
+
+            color: #aaa49e;
+
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .creative-item__tag {
+            display: inline-flex;
+
+            margin-top: 24px;
+            padding: 9px 13px;
+
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            border-radius: 999px;
+
+            color: #d8d2cc;
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Skills */
+
+        .skills {
+            padding: 110px 0;
+        }
+
+        .skills__card {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+
+            padding: 58px;
+
+            border: 1px solid var(--line);
+            border-radius: var(--radius-large);
+
+            background: rgba(255, 255, 255, 0.76);
+            backdrop-filter: blur(16px);
+        }
+
+        .skills__list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .skill-item {
+            position: relative;
+
+            padding: 21px 22px 21px 52px;
+
+            border: 1px solid var(--line);
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            color: #57514d;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .skill-item::before {
+            content: "✓";
+
+            position: absolute;
+            left: 20px;
+            top: 19px;
+
+            display: grid;
+            place-items: center;
+
+            width: 21px;
+            height: 21px;
+
+            border-radius: 50%;
+
+            background: var(--accent-soft);
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        /* Bottom */
+
+        .bottom-nav {
+            padding-bottom: 44px;
+        }
+
+        .bottom-nav__card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+
+            padding: 34px 38px;
+
+            border-radius: 28px;
+
+            background: var(--dark);
+            color: #ffffff;
+        }
+
+        .bottom-nav__small {
+            color: #999999;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+        }
+
+        .bottom-nav h2 {
+            margin-top: 6px;
+
+            font-family: "Manrope", sans-serif;
+            font-size: 27px;
+            line-height: 1.2;
+        }
+
+        .bottom-nav__link {
+            flex-shrink: 0;
+
+            padding: 14px 20px;
+
+            border-radius: 999px;
+
+            background: #ffffff;
+            color: var(--dark);
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            transition: transform 0.25s ease;
+        }
+
+        .bottom-nav__link:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Reveal */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.75s ease,
+                transform 0.75s ease;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 980px) {
+            .section-heading,
+            .skills__card {
+                grid-template-columns: 1fr;
+                gap: 34px;
+            }
+
+            .creative-item,
+            .creative-item:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: 34px;
+            }
+
+            .creative-item:nth-child(even) .creative-item__image,
+            .creative-item:nth-child(even) .creative-item__content {
+                order: initial;
+            }
+
+            .creative-item__content {
+                max-width: 760px;
+            }
+
+            .product-card:nth-child(1),
+            .product-card:nth-child(2),
+            .product-card:nth-child(3),
+            .product-card:nth-child(4),
+            .product-card:nth-child(5),
+            .product-card:nth-child(6) {
+                grid-column: span 6;
+                grid-row: auto;
+            }
+
+            .advertising-card__content {
+                grid-template-columns: 1fr;
+            }
+
+            .tag-list {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                width: min(100% - 24px, 1180px);
+            }
+
+            .header {
+                padding: 14px 0;
+            }
+
+            .logo__text {
+                display: none;
+            }
+
+            .back-link {
+                padding: 10px 14px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 28px 0 66px;
+            }
+
+            .hero__card {
+                padding: 40px 24px;
+                border-radius: 29px;
+            }
+
+            .hero__description {
+                font-size: 16px;
+                line-height: 1.72;
+            }
+
+            .section {
+                padding-bottom: 78px;
+            }
+
+            .section-heading {
+                margin-bottom: 34px;
+            }
+
+            .advertising-card {
+                border-radius: 25px;
+            }
+
+            .advertising-card__content {
+                padding: 28px 22px 30px;
+            }
+
+            .advertising-card__title {
+                font-size: 27px;
+            }
+
+            .product-section {
+                padding: 78px 0;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .product-card:nth-child(1),
+            .product-card:nth-child(2),
+            .product-card:nth-child(3),
+            .product-card:nth-child(4),
+            .product-card:nth-child(5),
+            .product-card:nth-child(6) {
+                grid-column: auto;
+            }
+
+            .product-card {
+                min-height: 390px;
+                border-radius: 22px;
+            }
+
+            .creative-section {
+                padding: 82px 0;
+            }
+
+            .creative-intro {
+                margin-bottom: 55px;
+            }
+
+            .creative-item {
+                margin-bottom: 78px;
+            }
+
+            .creative-item__image {
+                border-radius: 24px;
+            }
+
+            .skills {
+                padding: 78px 0;
+            }
+
+            .skills__card {
+                padding: 32px 22px;
+                border-radius: 26px;
+            }
+
+            .skills__list {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-nav__card {
+                align-items: flex-start;
+                flex-direction: column;
+
+                padding: 28px 24px;
+            }
+
+            .bottom-nav__link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            * {
+                animation: none !important;
+            }
+        }
+        @media (max-width: 650px) {
+  .hero h1 {
+    font-size: clamp(42px, 13vw, 58px);
+    line-height: 1;
+  }
+
+  .section-title {
+    font-size: clamp(36px, 11vw, 46px);
+  }
+
+  .creative-item__title {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  .product-card {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__card {
+    padding: 36px 20px;
+  }
+
+  .advertising-card__content {
+    padding: 24px 18px 26px;
+  }
+
+  .product-card__caption {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+
+  .skills__card {
+    padding: 28px 18px;
+  }
+}
+    </style>
+
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container header__inner">
+
+            <a href="../index.html"
+               class="logo"
+               aria-label="Вернуться на главную страницу">
+
+                <span class="logo__mark">
+                    AS
+                </span>
+
+                <span class="logo__text">
+                    Анна Соколова
+                </span>
+
+            </a>
+
+            <a href="../index.html#projects"
+               class="back-link">
+
+                <span>←</span>
+
+                Вернуться к проектам
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero__card reveal">
+
+                    <div class="hero__content">
+
+                        <div class="eyebrow">
+                            Кейс №3
+                        </div>
+
+                        <h1>
+                            AI-визуалы
+                            для брендов
+                        </h1>
+
+                        <p class="hero__description">
+                            Создание рекламной графики, предметной
+                            AI-съёмки и концептуальных визуалов.
+                            В этом кейсе собраны три направления:
+                            коммерческая рекламная кампания,
+                            предметная серия косметики и авторская
+                            коллекция необычных визуальных метафор.
+                        </p>
+
+                        <div class="hero__chips">
+
+                            <span class="hero-chip">
+                                AI-графика
+                            </span>
+
+                            <span class="hero-chip">
+                                Рекламные визуалы
+                            </span>
+
+                            <span class="hero-chip">
+                                Предметная съёмка
+                            </span>
+
+                            <span class="hero-chip">
+                                Креативные концепции
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADVERTISING -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+
+                        <div class="section-label">
+                            Направление 01
+                        </div>
+
+                        <h2 class="section-title">
+                            Рекламная
+                            кампания
+                        </h2>
+
+                    </div>
+
+                    <div class="section-description">
+
+                        <p>
+                            Разработка визуальной концепции для новой
+                            линейки натуральных напитков. Главная задача —
+                            создать яркий, свежий и коммерчески применимый
+                            визуальный стиль бренда.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <article class="advertising-card reveal">
+
+                    <div class="advertising-card__image">
+
+                        <img src="../assets/ai-visuals/advertising/advertising-livika-campaign.jpg"
+                             alt="Рекламная кампания натуральных напитков ЛИВИКА">
+
+                    </div>
+
+                    <div class="advertising-card__content">
+
+                        <div>
+
+                            <h3 class="advertising-card__title">
+                                ЛИВИКА
+                            </h3>
+
+                            <div class="advertising-card__subtitle">
+                                Концепция рекламной кампании натуральных напитков
+                            </div>
+
+                            <p class="advertising-card__text">
+                                Разработана концепция визуальной рекламной
+                                кампании для бренда натуральных напитков
+                                «ЛИВИКА». Созданы ключевые рекламные материалы,
+                                объединённые единой айдентикой, современной
+                                продуктовой фотографией и акцентом
+                                на натуральность продукта.
+                            </p>
+
+                        </div>
+
+                        <div class="tag-list">
+
+                            <span class="tag">
+                                Реклама
+                            </span>
+
+                            <span class="tag">
+                                Айдентика
+                            </span>
+
+                            <span class="tag">
+                                Продукт
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT -->
+
+        <section class="product-section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+
+                        <div class="section-label">
+                            Направление 02
+                        </div>
+
+                        <h2 class="section-title">
+                            Предметная
+                            AI-съёмка
+                        </h2>
+
+                    </div>
+
+                    <div class="section-description">
+
+                        <p>
+                            Серия предметных визуалов для бренда косметики
+                            для тела SKINFLOW. Съёмка построена на мягком
+                            естественном освещении, натуральных фактурах
+                            и спокойной премиальной эстетике.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-grid">
+
+                    <article class="product-card reveal">
+
+                        <img src="../assets/ai-visuals/product/product-body-cream.jpg"
+                             alt="Крем для тела SKINFLOW">
+
+                        <div class="product-card__caption">
+
+                            <span>
+                                Крем для тела
+                            </span>
+
+                            <span class="product-card__number">
+                                01
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card reveal">
+
+                        <img src="../assets/ai-visuals/product/product-body-lotion.jpg"
+                             alt="Лосьон для тела с алоэ и огурцом SKINFLOW">
+
+                        <div class="product-card__caption">
+
+                            <span>
+                                Лосьон с алоэ и огурцом
+                            </span>
+
+                            <span class="product-card__number">
+                                02
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card reveal">
+
+                        <img src="../assets/ai-visuals/product/product-body-scrub.jpg"
+                             alt="Скраб для тела с кокосом и сахаром SKINFLOW">
+
+                        <div class="product-card__caption">
+
+                            <span>
+                                Скраб с кокосом и сахаром
+                            </span>
+
+                            <span class="product-card__number">
+                                03
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card reveal">
+
+                        <img src="../assets/ai-visuals/product/product-body-oil.jpg"
+                             alt="Масло для тела SKINFLOW">
+
+                        <div class="product-card__caption">
+
+                            <span>
+                                Масло для тела
+                            </span>
+
+                            <span class="product-card__number">
+                                04
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card reveal">
+
+                        <img src="../assets/ai-visuals/product/product-shower-gel.jpg"
+                             alt="Гель для душа SKINFLOW">
+
+                        <div class="product-card__caption">
+
+                            <span>
+                                Гель для душа
+                            </span>
+
+                            <span class="product-card__number">
+                                05
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-card reveal">
+
+                        <img src="../assets/ai-visuals/product/product-hand-body-cream.jpg"
+                             alt="Крем для рук и тела SKINFLOW">
+
+                        <div class="product-card__caption">
+
+                            <span>
+                                Крем для рук и тела
+                            </span>
+
+                            <span class="product-card__number">
+                                06
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CREATIVE -->
+
+        <section class="creative-section">
+
+            <div class="container">
+
+                <div class="section-heading creative-intro reveal">
+
+                    <div>
+
+                        <div class="section-label">
+                            Направление 03
+                        </div>
+
+                        <h2 class="section-title">
+                            Креативные
+                            концепции
+                        </h2>
+
+                    </div>
+
+                    <div class="section-description">
+
+                        <p>
+                            Авторская серия рекламных AI-концепций,
+                            построенных на визуальных метафорах.
+                            Обычные продукты превращаются в масштабные
+                            фантастические образы, которые привлекают
+                            внимание и помогают передать характер бренда.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 01 HONEY -->
+
+                <article class="creative-item reveal">
+
+                    <div class="creative-item__image">
+
+                        <img src="../assets/ai-visuals/creative/creative-honey-waterfall.jpg"
+                             alt="Мёд превращается в золотой водопад">
+
+                    </div>
+
+                    <div class="creative-item__content">
+
+                        <div class="creative-item__number">
+                            Концепция 01
+                        </div>
+
+                        <h3 class="creative-item__title">
+                            Мёд превращается
+                            в золотой водопад
+                        </h3>
+
+                        <div class="creative-item__subtitle">
+                            Концепция рекламного визуала для бренда натурального мёда
+                        </div>
+
+                        <p class="creative-item__text">
+                            Мощный золотой поток становится метафорой
+                            природного происхождения, изобилия и ценности
+                            продукта. Масштабный образ передаёт силу природы,
+                            чистоту и насыщенность вкуса.
+                        </p>
+
+                        <span class="creative-item__tag">
+                            Визуальная метафора
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 02 PERFUME -->
+
+                <article class="creative-item reveal">
+
+                    <div class="creative-item__image">
+
+                        <img src="../assets/ai-visuals/creative/creative-perfume-crystals.jpg"
+                             alt="Флакон духов рождается из кристаллов">
+
+                    </div>
+
+                    <div class="creative-item__content">
+
+                        <div class="creative-item__number">
+                            Концепция 02
+                        </div>
+
+                        <h3 class="creative-item__title">
+                            Рождение
+                            аромата
+                        </h3>
+
+                        <div class="creative-item__subtitle">
+                            Концепция рекламного визуала для парфюмерного бренда
+                        </div>
+
+                        <p class="creative-item__text">
+                            Флакон словно появляется из сияющей
+                            кристаллической структуры. Кристаллы становятся
+                            метафорой чистоты, света, редкости
+                            и драгоценного характера аромата.
+                        </p>
+
+                        <span class="creative-item__tag">
+                            Парфюмерная концепция
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 03 COFFEE -->
+
+                <article class="creative-item reveal">
+
+                    <div class="creative-item__image">
+
+                        <img src="../assets/ai-visuals/creative/creative-coffee-volcano.jpg"
+                             alt="Чашка кофе превращается в вулкан">
+
+                    </div>
+
+                    <div class="creative-item__content">
+
+                        <div class="creative-item__number">
+                            Концепция 03
+                        </div>
+
+                        <h3 class="creative-item__title">
+                            Кофейный
+                            вулкан
+                        </h3>
+
+                        <div class="creative-item__subtitle">
+                            Концепция рекламного визуала для кофейного бренда
+                        </div>
+
+                        <p class="creative-item__text">
+                            Чашка кофе превращается в мощный вулкан,
+                            а клубы ароматного пара становятся частью
+                            извержения. Образ передаёт насыщенный вкус,
+                            силу обжарки и энергию свежесваренного кофе.
+                        </p>
+
+                        <span class="creative-item__tag">
+                            Энергия продукта
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 04 ORANGE -->
+
+                <article class="creative-item reveal">
+
+                    <div class="creative-item__image">
+
+                        <img src="../assets/ai-visuals/creative/creative-orange-planet.jpg"
+                             alt="Апельсин раскрывается как планета">
+
+                    </div>
+
+                    <div class="creative-item__content">
+
+                        <div class="creative-item__number">
+                            Концепция 04
+                        </div>
+
+                        <h3 class="creative-item__title">
+                            Планета
+                            цитрусов
+                        </h3>
+
+                        <div class="creative-item__subtitle">
+                            Концепция рекламного визуала для бренда натуральных соков
+                        </div>
+
+                        <p class="creative-item__text">
+                            Сочный апельсин раскрывается как яркая планета,
+                            наполненная светом, энергией и свежестью.
+                            Космическая композиция создаёт эффект
+                            настоящего взрыва вкуса.
+                        </p>
+
+                        <span class="creative-item__tag">
+                            Яркий коммерческий визуал
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 05 WATER -->
+
+                <article class="creative-item reveal">
+
+                    <div class="creative-item__image">
+
+                        <img src="../assets/ai-visuals/creative/creative-glacier-water.jpg"
+                             alt="Бутылка воды вырастает из ледника">
+
+                    </div>
+
+                    <div class="creative-item__content">
+
+                        <div class="creative-item__number">
+                            Концепция 05
+                        </div>
+
+                        <h3 class="creative-item__title">
+                            Рождённая
+                            ледником
+                        </h3>
+
+                        <div class="creative-item__subtitle">
+                            Концепция рекламного визуала для бренда природной воды
+                        </div>
+
+                        <p class="creative-item__text">
+                            Бутылка словно рождается из древнего ледника.
+                            Холодная палитра, кристально чистый лёд
+                            и потоки талой воды подчёркивают свежесть,
+                            чистоту и природное происхождение продукта.
+                        </p>
+
+                        <span class="creative-item__tag">
+                            Чистота и свежесть
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 06 FLOWERS -->
+
+                <article class="creative-item reveal">
+
+                    <div class="creative-item__image">
+
+                        <img src="../assets/ai-visuals/creative/creative-flower-planet.jpg"
+                             alt="Букет превращается в парящую цветочную планету">
+
+                    </div>
+
+                    <div class="creative-item__content">
+
+                        <div class="creative-item__number">
+                            Концепция 06
+                        </div>
+
+                        <h3 class="creative-item__title">
+                            Цветочная
+                            планета
+                        </h3>
+
+                        <div class="creative-item__subtitle">
+                            Концепция рекламного визуала для цветочного бренда
+                        </div>
+
+                        <p class="creative-item__text">
+                            Букет превращается в целую парящую планету.
+                            Яркие цветы, динамика лепестков и космическая
+                            атмосфера символизируют вдохновение,
+                            красоту и безграничное разнообразие природы.
+                        </p>
+
+                        <span class="creative-item__tag">
+                            Фантазийная концепция
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section class="skills">
+
+            <div class="container">
+
+                <div class="skills__card reveal">
+
+                    <div>
+
+                        <div class="section-label">
+                            Что было сделано
+                        </div>
+
+                        <h2 class="section-title">
+                            От идеи
+                            до серии визуалов
+                        </h2>
+
+                    </div>
+
+                    <div class="skills__list">
+
+                        <div class="skill-item">
+                            Разработка рекламной концепции
+                        </div>
+
+                        <div class="skill-item">
+                            Создание единой стилистики
+                        </div>
+
+                        <div class="skill-item">
+                            Предметная AI-визуализация
+                        </div>
+
+                        <div class="skill-item">
+                            Работа с композицией и светом
+                        </div>
+
+                        <div class="skill-item">
+                            Создание визуальных метафор
+                        </div>
+
+                        <div class="skill-item">
+                            Подготовка изображений для digital
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM -->
+
+        <section class="bottom-nav">
+
+            <div class="container">
+
+                <div class="bottom-nav__card">
+
+                    <div>
+
+                        <div class="bottom-nav__small">
+                            Все проекты
+                        </div>
+
+                        <h2>
+                            Вернуться к портфолио
+                        </h2>
+
+                    </div>
+
+                    <a href="../index.html#projects"
+                       class="bottom-nav__link">
+
+                        Смотреть все кейсы →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add(
+                                "is-visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+                        }
+                    });
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+</body>
+
+</html>

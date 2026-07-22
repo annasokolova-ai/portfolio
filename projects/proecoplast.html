@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Кейс Анны Соколовой: разработка корпоративного сайта для производителя пластиковых колодцев ПРОЭКОПЛАСТ."
+  >
+
+  <title>Кейс ПРОЭКОПЛАСТ — Анна Соколова</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --background: #fbfaf8;
+      --surface: #ffffff;
+      --text: #20212a;
+      --muted: #676875;
+      --border: rgba(32, 33, 42, 0.1);
+
+      --lavender: #d8c7ff;
+      --lavender-strong: #7554dd;
+      --peach: #ffe4d7;
+      --yellow: #fff2b8;
+      --blue: #dff4ff;
+      --mint: #ddf7ea;
+
+      --shadow:
+        0 24px 70px rgba(45, 41, 58, 0.08);
+
+      --container: 1380px;
+      --radius-large: 38px;
+      --radius-medium: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+     overflow-x: hidden;
+
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 8% 5%,
+          rgba(221, 247, 234, 0.55),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 92% 12%,
+          rgba(216, 199, 255, 0.24),
+          transparent 23%
+        ),
+        var(--background);
+
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      color: var(--lavender-strong);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      width: 36px;
+      height: 2px;
+
+      content: "";
+      background: currentColor;
+      border-radius: 20px;
+    }
+
+    .section-title {
+      max-width: 920px;
+
+      font-size: clamp(46px, 6vw, 84px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-top: 26px;
+
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    /* Шапка */
+
+    .case-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(251, 250, 248, 0.86);
+      border-bottom: 1px solid rgba(32, 33, 42, 0.08);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .case-header__inner {
+      min-height: 84px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .back-link,
+    .site-link {
+      min-height: 48px;
+      padding: 0 18px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .back-link {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--border);
+    }
+
+    .site-link {
+      color: #ffffff;
+      background: var(--lavender-strong);
+    }
+
+    .back-link:hover,
+    .site-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .case-number {
+      color: var(--lavender-strong);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Первый экран */
+
+    .case-hero {
+      padding: 76px 0 60px;
+    }
+
+    .case-hero__card {
+      position: relative;
+      overflow: hidden;
+
+      min-height: 650px;
+      padding: clamp(38px, 6vw, 82px);
+
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(480px, 1.15fr);
+      align-items: center;
+      gap: 58px;
+
+      background:
+        radial-gradient(
+          circle at 90% 82%,
+          rgba(255, 255, 255, 0.7),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          var(--mint),
+          #f4fff9
+        );
+
+      border: 1px solid rgba(32, 33, 42, 0.07);
+      border-radius: 44px;
+    }
+
+    .case-hero__eyebrow {
+      display: block;
+      margin-bottom: 26px;
+
+      color: var(--lavender-strong);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .case-hero h1 {
+      max-width: 680px;
+
+      font-size: clamp(48px, 5.8vw, 84px);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+    }
+
+    .case-hero__description {
+      max-width: 650px;
+      margin-top: 28px;
+
+      color: #575965;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .case-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+
+      margin-top: 34px;
+    }
+
+    .button {
+      min-height: 56px;
+      padding: 0 24px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+
+      border-radius: 999px;
+
+      font-size: 15px;
+      font-weight: 750;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button--primary {
+      color: #ffffff;
+      background: var(--lavender-strong);
+      box-shadow: 0 18px 38px rgba(117, 84, 221, 0.24);
+    }
+
+    .button--secondary {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid var(--border);
+    }
+
+    /* Ноутбук */
+
+    .laptop {
+      width: 100%;
+      max-width: 700px;
+      margin-left: 40px;
+    }
+
+    .laptop__screen {
+      position: relative;
+      overflow: hidden;
+
+      width: 94%;
+      margin: 0 auto;
+      padding: 13px;
+
+      background: #191a20;
+      border-radius: 20px 20px 10px 10px;
+      box-shadow: 0 28px 60px rgba(35, 65, 52, 0.18);
+    }
+
+    .laptop__screen::before {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+
+      width: 52px;
+      height: 7px;
+
+      content: "";
+      background: #0e0f13;
+      border-radius: 0 0 7px 7px;
+
+      transform: translateX(-50%);
+    }
+
+    .laptop__screen img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+      object-position: top;
+
+      border-radius: 11px 11px 5px 5px;
+    }
+
+    .laptop__base {
+      width: 100%;
+      height: 17px;
+      margin-top: -1px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #42444b,
+          #17181c
+        );
+
+      border-radius: 3px 3px 26px 26px;
+      box-shadow: 0 14px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    /* Карточки проекта */
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .fact-card {
+      min-height: 210px;
+      padding: 28px;
+
+      border: 1px solid rgba(32, 33, 42, 0.07);
+      border-radius: var(--radius-medium);
+    }
+
+    .fact-card:nth-child(1) {
+      background: var(--mint);
+    }
+
+    .fact-card:nth-child(2) {
+      background: rgba(216, 199, 255, 0.48);
+    }
+
+    .fact-card:nth-child(3) {
+      background: var(--peach);
+    }
+
+    .fact-card:nth-child(4) {
+      background: var(--yellow);
+    }
+
+    .fact-icon {
+      width: 46px;
+      height: 46px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 34px;
+
+      background: rgba(255, 255, 255, 0.62);
+      border-radius: 14px;
+
+      font-size: 20px;
+    }
+
+    .fact-card span {
+      display: block;
+      margin-bottom: 8px;
+
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .fact-card strong {
+      display: block;
+
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    /* Задача, работа, результат */
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+
+      margin-top: 54px;
+    }
+
+    .story-card {
+      padding: 38px;
+
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow);
+    }
+
+    .story-card:nth-child(1) {
+      border-top: 6px solid var(--mint);
+    }
+
+    .story-card:nth-child(2) {
+      border-top: 6px solid var(--lavender);
+    }
+
+    .story-card:nth-child(3) {
+      border-top: 6px solid var(--peach);
+    }
+
+    .story-card h3 {
+      margin-bottom: 20px;
+
+      font-size: 28px;
+      letter-spacing: -0.035em;
+    }
+
+    .story-card p,
+    .story-card li {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .story-card ul {
+      padding-left: 20px;
+    }
+
+    .story-card li + li {
+      margin-top: 9px;
+    }
+
+    /* Галерея */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+
+      margin-top: 56px;
+    }
+
+    .screen-card {
+      padding: 16px;
+
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 18px 50px rgba(45, 41, 58, 0.07);
+
+      transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
+    }
+
+    .screen-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(45, 41, 58, 0.11);
+    }
+
+    .screen-card img {
+      width: 100%;
+
+      border: 1px solid rgba(32, 33, 42, 0.06);
+      border-radius: 18px;
+    }
+
+    .screen-card__caption {
+      padding: 20px 8px 8px;
+
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .screen-number {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+      place-items: center;
+      flex: 0 0 36px;
+
+      color: var(--lavender-strong);
+      background: rgba(216, 199, 255, 0.48);
+      border-radius: 12px;
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .screen-card h3 {
+      font-size: 17px;
+    }
+
+    /* Инструменты */
+
+    .tools-card {
+      padding: clamp(36px, 5vw, 60px);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(216, 199, 255, 0.52),
+          rgba(223, 244, 255, 0.72)
+        );
+
+      border: 1px solid rgba(32, 33, 42, 0.07);
+      border-radius: var(--radius-large);
+    }
+
+    .tools-card h2 {
+      margin-bottom: 32px;
+
+      font-size: clamp(38px, 5vw, 62px);
+      letter-spacing: -0.05em;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tools-list span {
+      padding: 12px 17px;
+
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(32, 33, 42, 0.07);
+      border-radius: 999px;
+
+      color: #4f465f;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Финальный блок */
+
+    .case-cta {
+      padding: clamp(42px, 7vw, 84px);
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+
+      background:
+        radial-gradient(
+          circle at 92% 5%,
+          rgba(216, 199, 255, 0.9),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          var(--yellow),
+          var(--peach)
+        );
+
+      border: 1px solid rgba(32, 33, 42, 0.07);
+      border-radius: 42px;
+    }
+
+    .case-cta h2 {
+      max-width: 800px;
+
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+
+    .case-cta p {
+      max-width: 680px;
+      margin-top: 24px;
+
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+/* Следующий проект */
+
+.bottom-nav {
+  padding: 20px 0 44px;
+}
+
+.bottom-nav__card {
+  padding: 34px 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  color: #ffffff;
+  background: #171717;
+
+  border-radius: 28px;
+}
+
+.bottom-nav__small {
+  color: #a5a5a5;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.bottom-nav h2 {
+  margin-top: 6px;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.bottom-nav__link {
+  flex-shrink: 0;
+
+  padding: 14px 20px;
+
+  color: #171717;
+  background: #ffffff;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.bottom-nav__link:hover {
+  transform: translateY(-2px);
+  background: #f1f1f1;
+}
+
+/* Адаптация */
+
+    /* Адаптация */
+
+    @media (max-width: 1100px) {
+      .case-hero__card {
+        grid-template-columns: 1fr;
+      }
+
+      .laptop {
+        max-width: 820px;
+        margin: 20px auto 0;
+      }
+
+      .facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-cta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .case-header__inner {
+        min-height: 74px;
+      }
+
+      .case-number {
+        display: none;
+      }
+
+      .site-link {
+        display: none;
+      }
+
+      .case-hero {
+        padding-top: 38px;
+      }
+
+      .case-hero__card {
+        min-height: auto;
+        padding: 34px 24px;
+        border-radius: 28px;
+      }
+
+      .case-hero h1 {
+        font-size: 48px;
+      }
+
+      .case-hero__description {
+        font-size: 17px;
+      }
+
+      .facts-grid,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .fact-card {
+        min-height: auto;
+      }
+
+      .story-card {
+        padding: 28px;
+      }
+
+      .case-cta {
+        padding: 38px 24px;
+        border-radius: 28px;
+      }
+
+      .case-footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .bottom-nav__card {
+  padding: 28px 24px;
+
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bottom-nav__link {
+  width: 100%;
+}
+    }
+
+    @media (max-width: 480px) {
+      .back-link {
+        font-size: 13px;
+      }
+
+      .case-hero__actions {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .case-hero h1 {
+        font-size: 42px;
+      }
+
+      .section-title {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: 760px) {
+  .case-hero h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    line-height: 1;
+  }
+
+  .section-title {
+    font-size: clamp(38px, 10vw, 46px);
+    line-height: 1.02;
+  }
+
+  .laptop {
+    width: 100%;
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-hero__card {
+    padding: 30px 20px;
+  }
+
+  .story-card {
+    padding: 24px;
+  }
+
+  .bottom-nav__card {
+    padding: 26px 22px;
+  }
+}
+  </style>
+
+  <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+  <!-- Верхняя панель -->
+
+  <header class="case-header">
+
+    <div class="container case-header__inner">
+
+      <a class="back-link" href="../index.html">
+        <span aria-hidden="true">←</span>
+        Назад в портфолио
+      </a>
+
+      <span class="case-number">
+        Кейс 01
+      </span>
+
+      <a
+        class="site-link"
+        href="https://annasokolova-ai.github.io/proecoplast-site/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Открыть сайт
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- Первый экран -->
+
+    <section class="case-hero">
+
+      <div class="container">
+
+        <div class="case-hero__card">
+
+          <div>
+
+            <span class="case-hero__eyebrow">
+              Реальный проект · Корпоративный сайт
+            </span>
+
+            <h1>
+              Корпоративный сайт для производителя пластиковых колодцев
+            </h1>
+
+            <p class="case-hero__description">
+              Разработка структуры, текстов, визуальной подачи
+              и адаптивной HTML-вёрстки для компании ПРОЭКОПЛАСТ.
+              Готовый сайт опубликован на GitHub Pages.
+            </p>
+
+            <div class="case-hero__actions">
+
+              <a
+                class="button button--primary"
+                href="https://annasokolova-ai.github.io/proecoplast-site/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Посмотреть готовый сайт
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a class="button button--secondary" href="#screens">
+                Смотреть экраны
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="laptop" aria-hidden="true">
+
+            <div class="laptop__screen">
+
+              <img
+                src="../assets/projects/hero-screen-proecoplast.png"
+                alt=""
+              >
+
+            </div>
+
+            <div class="laptop__base"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Основные данные -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="facts-grid">
+
+          <article class="fact-card">
+
+            <div class="fact-icon" aria-hidden="true">♡</div>
+
+            <span>Клиент</span>
+
+            <strong>
+              ООО «ПРОЭКОПЛАСТ»
+            </strong>
+
+          </article>
+
+          <article class="fact-card">
+
+            <div class="fact-icon" aria-hidden="true">□</div>
+
+            <span>Тип проекта</span>
+
+            <strong>
+              Корпоративный сайт производителя
+            </strong>
+
+          </article>
+
+          <article class="fact-card">
+
+            <div class="fact-icon" aria-hidden="true">◎</div>
+
+            <span>Моя роль</span>
+
+            <strong>
+              Структура, контент, визуалы, HTML/CSS
+            </strong>
+
+          </article>
+
+          <article class="fact-card">
+
+            <div class="fact-icon" aria-hidden="true">↗</div>
+
+            <span>Статус</span>
+
+            <strong>
+              Опубликован на GitHub Pages
+            </strong>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Задача и результат -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <span class="section-label">
+          О проекте
+        </span>
+
+        <h2 class="section-title">
+          От задачи до готового сайта
+        </h2>
+
+        <p class="section-intro">
+          Проект создавался для российского производителя пластиковых
+          колодцев. Главной целью было понятно представить продукцию,
+          преимущества компании и упростить отправку заявки.
+        </p>
+
+        <div class="story-grid">
+
+          <article class="story-card">
+
+            <h3>Задача</h3>
+
+            <p>
+              Создать современный корпоративный сайт, который
+              показывает ассортимент пластиковых колодцев,
+              объясняет особенности конструкции и помогает
+              потенциальному клиенту отправить запрос на расчёт.
+            </p>
+
+          </article>
+
+          <article class="story-card">
+
+            <h3>Что я сделала</h3>
+
+            <ul>
+              <li>Изучила продукт и целевую аудиторию.</li>
+              <li>Проанализировала сайты конкурентов.</li>
+              <li>Разработала структуру страницы.</li>
+              <li>Подготовила тексты и содержание блоков.</li>
+              <li>Подобрала и подготовила визуальные материалы.</li>
+              <li>Сверстала адаптивную HTML-страницу.</li>
+              <li>Подключила форму коммерческого предложения.</li>
+              <li>Опубликовала проект на GitHub Pages.</li>
+            </ul>
+
+          </article>
+
+          <article class="story-card">
+
+            <h3>Результат</h3>
+
+            <p>
+              Получился чистый и понятный корпоративный сайт,
+              который последовательно знакомит пользователя
+              с продукцией, преимуществами производителя
+              и основными характеристиками пластиковых колодцев.
+            </p>
+
+            <p style="margin-top: 16px;">
+              Страница адаптирована для компьютеров, планшетов
+              и мобильных устройств.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Галерея экранов -->
+
+    <section class="section" id="screens">
+
+      <div class="container">
+
+        <span class="section-label">
+          Основные экраны
+        </span>
+
+        <h2 class="section-title">
+          Как выглядит готовый сайт
+        </h2>
+
+        <p class="section-intro">
+          В кейсе показаны основные части страницы: первый экран,
+          каталог продукции, конструкция колодца, преимущества,
+          форма запроса и контактный блок.
+        </p>
+
+        <div class="gallery">
+
+          <article class="screen-card">
+
+            <img
+              src="../assets/projects/hero-screen-proecoplast.png"
+              alt="Главный экран сайта ПРОЭКОПЛАСТ"
+              loading="lazy"
+            >
+
+            <div class="screen-card__caption">
+
+              <span class="screen-number">01</span>
+
+              <h3>Главный экран</h3>
+
+            </div>
+
+          </article>
+
+          <article class="screen-card">
+
+            <img
+              src="../assets/projects/product-catalog.png"
+              alt="Каталог продукции ПРОЭКОПЛАСТ"
+              loading="lazy"
+            >
+
+            <div class="screen-card__caption">
+
+              <span class="screen-number">02</span>
+
+              <h3>Каталог продукции</h3>
+
+            </div>
+
+          </article>
+
+          <article class="screen-card">
+
+            <img
+              src="../assets/projects/well-construction.png"
+              alt="Конструкция пластикового колодца"
+              loading="lazy"
+            >
+
+            <div class="screen-card__caption">
+
+              <span class="screen-number">03</span>
+
+              <h3>Конструкция колодца</h3>
+
+            </div>
+
+          </article>
+
+          <article class="screen-card">
+
+            <img
+              src="../assets/projects/advantages-proecoplast.png"
+              alt="Преимущества компании ПРОЭКОПЛАСТ"
+              loading="lazy"
+            >
+
+            <div class="screen-card__caption">
+
+              <span class="screen-number">04</span>
+
+              <h3>Преимущества компании</h3>
+
+            </div>
+
+          </article>
+
+          <article class="screen-card">
+
+            <img
+              src="../assets/projects/commercial-offer-form.png"
+              alt="Форма получения коммерческого предложения"
+              loading="lazy"
+            >
+
+            <div class="screen-card__caption">
+
+              <span class="screen-number">05</span>
+
+              <h3>Форма коммерческого предложения</h3>
+
+            </div>
+
+          </article>
+
+          <article class="screen-card">
+
+            <img
+              src="../assets/projects/contacts-footer.png"
+              alt="Контакты и нижняя часть сайта"
+              loading="lazy"
+            >
+
+            <div class="screen-card__caption">
+
+              <span class="screen-number">06</span>
+
+              <h3>Контакты и нижняя часть сайта</h3>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Инструменты -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="tools-card">
+
+          <h2>
+            Инструменты проекта
+          </h2>
+
+          <div class="tools-list">
+
+            <span>ChatGPT</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>VS Code</span>
+            <span>GitHub</span>
+            <span>GitHub Pages</span>
+            <span>Адаптивная вёрстка</span>
+            <span>Анализ конкурентов</span>
+            <span>Подготовка контента</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Финальный блок -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="case-cta">
+
+          <div>
+
+            <h2>
+              Посмотрите готовый проект в браузере
+            </h2>
+
+            <p>
+              Сайт опубликован отдельно от портфолио,
+              поэтому его можно открыть и проверить
+              как полноценную рабочую страницу.
+            </p>
+
+          </div>
+
+          <a
+            class="button button--primary"
+            href="https://annasokolova-ai.github.io/proecoplast-site/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Открыть сайт
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="bottom-nav">
+    <div class="container">
+
+        <div class="bottom-nav__card">
+
+            <div>
+
+                <div class="bottom-nav__small">
+                    Следующий проект
+                </div>
+
+                <h2>
+                    HTML-письма
+                </h2>
+
+            </div>
+
+            <a href="html-email.html"
+               class="bottom-nav__link">
+
+                Смотреть следующий кейс →
+
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+  </main>
+
+</body>
+
+</html>
